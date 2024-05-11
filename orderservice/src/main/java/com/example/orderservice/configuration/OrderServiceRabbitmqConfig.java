@@ -10,6 +10,8 @@ public class OrderServiceRabbitmqConfig {
 
     public static final String QUEUE = "customer_order_service_queue";
 
+    public static final String QUEUE_2 = "user_order_service_queue";
+
     @Bean
     public MessageConverter converter() {
         return new Jackson2JsonMessageConverter();

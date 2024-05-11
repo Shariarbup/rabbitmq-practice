@@ -15,6 +15,11 @@ public class CustomerRabbitmqConfig {
     public static final String ROUTING_KEY = "customer_order_service_routing_key";
     public static final String QUEUE = "customer_order_service_queue";
 
+
+    public static final String ROUTING_KEY_2 = "user_order_service_routing_key";
+    public static final String QUEUE_2 = "user_order_service_queue";
+
+
     @Bean
     public Queue customerOrderQueue() {
         return new Queue(QUEUE);
@@ -30,9 +35,20 @@ public class CustomerRabbitmqConfig {
         return new TopicExchange(EXCHANGE);
     }
 
+
+//    @Bean
+//    public Queue customerOrderQueue2() {
+//        return new Queue(QUEUE_2);
+//    }
+
+
     @Bean
     public Binding bindingCustomerServiceQueue(TopicExchange exchange) {
         return BindingBuilder.bind(customerOrderQueue()).to(exchange).with(ROUTING_KEY);
     }
 
+//    @Bean
+//    public Binding bindingCustomerUserQueue(TopicExchange exchange){
+//        return BindingBuilder.bind(customerOrderQueue2()).to(exchange).with(ROUTING_KEY_2);
+//    }
 }
