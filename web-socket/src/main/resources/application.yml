@@ -1,2 +1,14 @@
-spring.application.name=web-socket
+spring:
+  application:
+    name: web-socket
+  data:
+    mongodb:
+      username: alibou
+      password: alibou
+      host: 27017
+      database: chat_app
+      authentication-database: admin
+
+server:
+  port: 8080
 

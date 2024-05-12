@@ -2,7 +2,6 @@ package com.example.orderservice.service;
 
 import com.example.orderservice.configuration.OrderServiceRabbitmqConfig;
 import com.example.orderservice.model.Customer;
-import com.example.orderservice.model.User;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
